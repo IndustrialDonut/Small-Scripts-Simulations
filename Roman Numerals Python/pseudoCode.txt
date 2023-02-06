@@ -1,0 +1,55 @@
+int 2 roman numeral pseudo code
+
+find biggest 'anchor' or 'base' of the number, i.e. if the number is 167 then the process starts with finding the 100 which is the base C
+
+then you need to find the rest of the 67, so find teh biggest base 50
+
+and then the rest for the 17
+
+biggest base of 10
+
+then 5
+
+then 1
+
+and then 1
+
+so ultimately you have C L X V I I 
+
+
+
+
+let's try 99
+
+biggest base is 90, XC
+
+find 9, biggest base IS IX
+
+now you have XCIX
+
+
+how about 44
+
+XL
+
+IV
+
+XLIV
+
+
+int2roman(num):
+	
+	check exit condition if num is in stock chars
+
+	...find the biggest base...
+
+	return str(base) + int2roman(num - base)
+
+
+fuck recursion
+
+int2roman(num):
+	while num > 0:
+		string += biggestBaseString(num)
+		num -= biggestBaseNumeric(num)
+
